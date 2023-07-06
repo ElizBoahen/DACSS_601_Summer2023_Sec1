@@ -10,7 +10,7 @@ format:
     code-copy: true
     code-tools: true
 categories:
-  - Tutorial 1
+  - Tutorial1
   - Eli Boahen
 ---
 

@@ -1,0 +1,159 @@
+---
+title: "Eli Boahen | Tutorial 2: RMarkdown and Best Practices"
+author: "Eli Boahen"
+description: "Notes and examples from Tutorial 2 submitted by Eli"
+date: "07/02/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - tutorial2
+  - Eli Boahen
+  - RMarkdown Basics
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+In this tutorial, we will make our mark in our coding learning journey by learning about `RMarkdown`
+
+
+## What's a `knitr`?
+
+`knitr` is what Rmarkdown runs on. Think of it this way:
+
+R is code 
+```{r}
+#like this
+```
+
+Then we have text . . . well like this
+
+and our charts or analyses `We haven't gone over how to do that yet`
+
+`knitr` literally knits `R` together into 1 document.
+Like a PDF or, well, like this page.
+
+If you're worried that `knitr` is not installed, you can search for it in the packages section of Rstudio.
+Right side of window ( bottom quadrant ) > Find the row of tabs with *Files* > Look for *Packages* > Click *Packages* > Type "knitr" into the search bar
+`knitr` should come up with a decription and version. I'm using version `1.42`
+:::{callout-tip}
+## What you can knit
+to `knit` a `RMarkdown` file into a PDF, you need something called a `Tex` distribution
+Just like with real knitting!--you may need an extra tool to help
+:::
+
+## The Basics
+So we know that `knitr` knits `R` into a nice little document, then what is `RMarkdown`. `RMarkdown` is `Markdown` but for `R`. `Markdown` is a language is a markdown language that allows people to format text, notes, documents, and even websites. It's prett handy, especially for making Intro or descriptive documents for GitHub repositories often dubbed `READme` files.
+
+To start one in R Studio, we have to:
+
+ Click *File* > Hover of Click *New File*
+ 
+ Now, you will be faced with a whole list of options. Move you mouse over the list, then select *R Markdown...*
+
+You will see a pop-up window where we can fill out the `Title` `Author` and the `Date` if needed; the date is automatically set to the day you are making the new RMarkdown file
+
+:::{.callout-warning}
+## Title vs File Name
+The `Title` you fill out when you make the `RMarkdown` file is different from the name you five to the file.I can fill out *Title* as "Test" but name the file `Test_Test.rmd`
+:::
+
+We are going to keep the format *HTML*. Click *OK*.
+
+Now that we made the file *please do not freak out*. A new `R` file can be intimidating. All of the information there is to help you, auto generated for your convenience.
+
+Okay, stick with me here:
+
+The Top 6 lines re *metadata* which is information about our file
+```{r}
+# It looks like this
+# 1 | ---
+# 2 | title: "Test"
+# 3 | author: "Eli B"
+# 4 | date: "2023-07-02"
+# 5 | output: html_document
+# 6 | ---
+```
+
+Loos familiar? Because we filled out some of this info when we *made the file*!
+
+The next chunk, yes chunk is the technical term, is called the *setup section*. This is where we tell the `RMarkdown` file how to set-up the page. In the new `.rmd` file you may have created,  it should say
+```{r}
+# {r setup, include=FALSE}
+# knitr::opts_chunk$set(echo = TRUE)
+```
+
+What all of this means is
+" Hey, setup `R` in this document "
+" We are going to `knit` together this document and I want you to `echo` the `R` code we write here ( which means show the `R` code we type out on the page / document ) "
+
+
+All of this top section is called `YAML` which literally means `Yet Another Markdown Language`
+
+## For Example . . .
+We can name our code chunks
+```{r codeChunk}
+chunk <- "chunkiest"
+chunk
+```
+
+When we do this--name our code chunks, create subheadings etc.--we not only make it easier for readers to navigate, but also our selves.
+
+Look along the bottom of your R file
+That's RStudio > Top left quadrant >look at the bar riiight above the `Console`, `Terminal`, `Background Jobs` tabs.
+Now, if you made subheadings or named your chunks, you can click the arrows next to the name of your current chunk, and navigate your R document! Pretty cool, right?
+:::{callout-tip}
+## There R Differences in `.R` files
+Anything ending in `.R`` is called an *R script*
+Files ending in `.Rmd` are `RMarkdowns`s
+:::
+
+## Nest Practices
+
+Now, I've done my best to incorporate these elements throughout this doc ( and the previous one )
+
+### #CommentYourCode!
+Comments help us remember or communicate what's going on & what we're doing
+```{r finals}
+#I want to figure out how much my grade is gonna crash ;w;
+grade <- 85
+( grade + 65 )/2 #I really crashed during the last exam
+
+```
+ And remember
+ >*Be as verbose as possible when commenting.*
+ 
+### ChooseYour Best_Case_Senario
+There are many ways to name a variable, and when we aim to be *verbose* our names can get a little long
+`veryspecificvariableweshouldnotchange`
+
+We can increase readability by using CamelCase
+`verySpecificVariableWeShouldNotChange`
+
+Snake_Case
+`very_specific_variable_we_should_not_change`
+
+Or even dots
+`very.spcific.variable.we.should.not.change`
+
+The important this is to remain consistent.
+
+## Stay Polite
+
+>
+* Don't change people's code
+* Download packages in console
+* run your dat in the scropt *__then__* comment it out
+
+## The End
+This is Eli and this has been a long one. See you in Tutorial 3!
+ 
