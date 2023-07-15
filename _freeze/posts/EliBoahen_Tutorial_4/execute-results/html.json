@@ -1,0 +1,14 @@
+{
+  "hash": "451446f129d5d548bae2c518d0ec8456",
+  "result": {
+    "markdown": "---\ntitle: \"Eli Boahen | Tutorial 4\"\nauthor: \"Eli Boahen\"\ndescription: \"Tutorial 4 Completion\"\ndate: \"07/13/2023\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n    code-copy: true\n    code-tools: true\ncategories:\n  - Tutorial4\n  - EliBoahen\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nknitr::opts_chunk$set(echo = TRUE)\n```\n:::\n\nFrom here on out, Tutorial Notes will be condensed\n\n## What did you learn?\nWe learned about transforming data using `filter()`, `arrange()`, `slice()`, `rename()`, `recode()`, `mutate()`, `na_if()`, `replace_na()`, `case_when()` commands\n\n## What did you remember?\n`select` \"pick something specifically\" vs `filter`'s \"remove this specifically\" is really `select` rows, & `filter` columns.\n\n## Anything you didn't understand?\n\n## Something you would change?\nI think it might be me, but I can't get the `pseo` data frame to work.\n\n\n\n\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

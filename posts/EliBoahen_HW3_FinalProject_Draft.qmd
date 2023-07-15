@@ -1,0 +1,62 @@
+---
+title: "Eli Boahen | Homework 3"
+author: "Eli Boahen"
+description: "Ananlalysis fo stress in the US over time"
+date: "07/08/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - HW3
+  - Eli Boahen
+  - Homework 3
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+ The emphasis in this homework is on exploratory data analysis using both graphics and statistics. It is intended to be a rough draft of your project.
+
+You should build on your prior homework - incorporating any feedback and adjusting the code and text as needed.
+
+These homeworks are intended to be cumulative. Therefore, while it is fine to switch datasets, you will need to include all of the information from HW2 for your new (or old) dataset in this hw submission as well. 
+## Include descriptive statistics
+
+### Mean
+### Median
+### Standard deviation for numerical variables
+### Frequencies and/or mode for categorical variables
+
+## Relevant visualizations using ggplot2 to complement these descriptive statistics
+Be sure to use faceting, coloring, and titles as needed. Each visualization should be accompanied by
+### Descriptive text that highlights
+#### the variable(s) used
+#### what questions might be answered with the visualizations
+#### What conclusions you can draw
+
+## Groupings
+- Use group_by()
+- Use summarise()
+- Compute descriptive stats and/or visualizations for any relevant groupings.
+
+:::{callout-tip}
+For example, if you were interested in how average income varies by state, you might compute mean income for all states combined, and then compare this to the range and distribution of mean income for each individual state in the US.
+:::
+
+## Identify limitations of your visualization, such as:
+
+### What questions are left unanswered with your visualizations
+### What about the visualizations may be unclear to a naive viewer
+### How could you improve the visualizations for the final project
+ 
+ 
+ 

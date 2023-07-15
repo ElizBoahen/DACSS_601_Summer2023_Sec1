@@ -1,0 +1,46 @@
+---
+title: "Eli Boahen | Tutorial 5"
+author: "Eli Boahen"
+description: "Tutorial 5 Completion"
+date: "07/13/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - Tutorial5
+  - EliBoahen
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What did you learn?
+We learned what is piping and how to use `%>%`, `group_by()`, `function(){}`, and `for(){}`
+
+## What did you remember?
+Order matters a lot for piping
+
+## Anything you didn't understand?
+I dont' reeaaaly understand why piping isn't on every line of R
+```{r}
+# Later on I thought of it like Mario:
+# Going into a pipe, doing tasks & exploring a world
+```
+
+## Something you would change?
+The *Writing Functions* section is a bit long and intimidating with the uncollapsible R code
+
+Not is a mean way at all! I saw a typo in Piping basics, second to last paragraph, "oten". I make the same mistake myself and often miss or don't flag it because "f" and "t" look similar to me.
+
+
+Best wishes,
+Eli

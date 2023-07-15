@@ -1,0 +1,107 @@
+---
+title: "Eli Boahen | Tutorial 3"
+author: "Eli Boahen"
+description: "A run through of tutorial 3"
+date: "07/06/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - Tutorial3
+  - EliBoahen
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+In this tutorial we talk about all things data and `R`. How to read in data, 
+
+## What is Data?
+Dataframes, or `df`, are 2-dimensional data structures--so tables
+
+Let's introduce the 3 data-horsemen of our Tutorial 3:
+`pseo`, `electricity`, `anes`
+
+Using the `head()` function, we can get the 1st five rows of a `df`
+
+```{r}
+head(pseo)
+```
+Uhhh, so that didn't quite work.
+
+After following the links to the site, I got the data! `pseo_all_institutions`! 
+```{r}
+read.csv(pseo_all_institutions)
+head(pseo_all_institutions)
+```
+uh-oh
+
+```{r}
+library(readr)
+library
+
+df<-read_csv("pseo")
+head(df)
+```
+Nope.
+
+
+
+Okay, after downloading that other version of `pseo`, then moving it into the posts folder, I got this to work
+```{r}
+head("pseo.csv")
+data_frame <- read.csv("pseo_all_institutions.csv")
+head(data_frame)
+
+```
+
+**So** We now have our data `pseo_all_institutions` saved as the variable `data_frame` and we have previewed it using `head()`
+
+## The next Dimension ~
+We know `dataframes` are tables, so 2-dimensional. we an see that using `dim()`.`dim()` shows us how many columns and rows we are dealing with.
+```{r}
+dim(data_frame)
+```
+This means 823 rows and 4 columns
+
+### Diving Deeper
+`colnames()` tells us the `col`, column, names.
+```{r}
+colnames(data_frame)
+```
+With this we learn our 4 columns are called, institution", "label", "institution_state", "statefips"
+
+`select()` tells us more about a specific column. The format is `select(data, "column")` which we can fill out with either the column name or column number.
+```{r}
+select(data_frame, 1)
+select(data_frame, "institution")
+```
+These rows of code above will produce the same thing. well, because they're referring to the same thing.
+
+
+`starts_with()`, `ends_with()`, and `contains()` checks for specific attributes. It essentially works like `filter()` and can be used within `select()`
+
+Now `table()` let's us asses the distribution of values
+Just be careful of your formatting
+```{r}
+table("institution") #<- incorrect
+table(select(data_frame, "institution")) #<- correct
+second_way_to_do_it <- select(data_frame, "institution") #<- also correct
+table(second_way_to_do_it)
+```
+
+This and `pivot` were learned and explore.
+This is Eli, signing off.
+
+:::{.callout-warning}
+I think this tutorial changes since I last looked at it. I re-did my notes just in case.
+:::
+

@@ -1,0 +1,14 @@
+{
+  "hash": "cbc37c993ae2a9746d06b6b1934a211f",
+  "result": {
+    "markdown": "---\ntitle: \"Eli Boahen | Tutorial 2: RMarkdown and Best Practices\"\nauthor: \"Eli Boahen\"\ndescription: \"Notes and examples from Tutorial 2 submitted by Eli\"\ndate: \"07/02/2023\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n    code-copy: true\n    code-tools: true\ncategories:\n  - tutorial2\n  - Eli Boahen\n  - RMarkdown Basics\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nknitr::opts_chunk$set(echo = TRUE)\n```\n:::\n\nIn this tutorial, we will make our mark in our coding learning journey by learning about `RMarkdown`\n\n\n## What's a `knitr`?\n\n`knitr` is what Rmarkdown runs on. Think of it this way:\n\nR is code \n\n::: {.cell}\n\n```{.r .cell-code}\n#like this\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

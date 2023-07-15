@@ -11,7 +11,7 @@ format:
     code-tools: true
 categories:
   - tutorial2
-  - Eli Boahen
+  - EliBoahen
   - RMarkdown Basics
 ---
 
@@ -44,7 +44,7 @@ Like a PDF or, well, like this page.
 
 If you're worried that `knitr` is not installed, you can search for it in the packages section of Rstudio.
 Right side of window ( bottom quadrant ) > Find the row of tabs with *Files* > Look for *Packages* > Click *Packages* > Type "knitr" into the search bar
-`knitr` should come up with a decription and version. I'm using version `1.42`
+`knitr` should come up with a description and version. I'm using version `1.42`
 :::{callout-tip}
 ## What you can knit
 to `knit` a `RMarkdown` file into a PDF, you need something called a `Tex` distribution
@@ -124,9 +124,9 @@ Now, I've done my best to incorporate these elements throughout this doc ( and t
 ### #CommentYourCode!
 Comments help us remember or communicate what's going on & what we're doing
 ```{r finals}
-#I want to figure out how much my grade is gonna crash ;w;
+# I want to figure out how much my grade is gonna crash ;w;
 grade <- 85
-( grade + 65 )/2 #I really crashed during the last exam
+( grade + 65 )/2 # I really crashed during the last exam
 
 ```
  And remember
@@ -148,11 +148,10 @@ Or even dots
 The important this is to remain consistent.
 
 ## Stay Polite
-
->
+* Don't download things onto other people's computers
 * Don't change people's code
 * Download packages in console
-* run your dat in the scropt *__then__* comment it out
+* run your data in the script *__then__* comment it out
 
 ## The End
 This is Eli and this has been a long one. See you in Tutorial 3!

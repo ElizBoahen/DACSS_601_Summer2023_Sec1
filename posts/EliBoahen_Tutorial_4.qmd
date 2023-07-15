@@ -1,0 +1,36 @@
+---
+title: "Eli Boahen | Tutorial 4"
+author: "Eli Boahen"
+description: "Tutorial 4 Completion"
+date: "07/13/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - Tutorial4
+  - EliBoahen
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+From here on out, Tutorial Notes will be condensed
+
+## What did you learn?
+We learned about transforming data using `filter()`, `arrange()`, `slice()`, `rename()`, `recode()`, `mutate()`, `na_if()`, `replace_na()`, `case_when()` commands
+
+## What did you remember?
+`select` "pick something specifically" vs `filter`'s "remove this specifically" is really `select` rows, & `filter` columns.
+
+## Anything you didn't understand?
+
+## Something you would change?
+I think it might be me, but I can't get the `pseo` data frame to work.

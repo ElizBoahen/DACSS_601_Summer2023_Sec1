@@ -1,0 +1,38 @@
+---
+title: "Eli Boahen | Tutorial 2: RMarkdown and Best Practices"
+author: "Eli Boahen"
+description: "Notes and examples from Tutorial 2 submitted by Eli"
+date: "07/02/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - tutorial2
+  - Eli Boahen
+  - RMarkdown Basics
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+In this tutorial, we will make our mark in our coding learning journey by learning about `RMarkdown`
+
+
+## What's a `knitr`?
+
+`knitr` is what Rmarkdown runs on. Think of it this way:
+
+R is code 
+```{r}
+#like this
+```
+
+ 

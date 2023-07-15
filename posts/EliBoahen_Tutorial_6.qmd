@@ -1,0 +1,43 @@
+---
+title: "Eli Boahen | Tutorial 6"
+author: "Eli Boahen"
+description: "Tutorial 6 Completion"
+date: "07/13/2023"
+format:
+  html:
+    toc: true
+    code-fold: true
+    code-copy: true
+    code-tools: true
+categories:
+  - Tutorial6
+  - EliBoahen
+---
+
+```{r}
+#| label: setup
+#| warning: false
+
+library(tidyverse)
+
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## What did you learn?
+How to make my data pretty :D
+
+## What did you remember?
+`geom_violin` did not do what I thought it was gonna do. And honestly, visualizations in R are not as hard as I thought they were.
+
+## Anything you didn't understand?
+I still don't get why `pseo` doesn't work for me and is not listed in `R`
+```{r}
+data
+```
+
+## Something you would change?
+I've been loving the glossary. I like this question at the end of each tutorial.
+
+
+Best wishes,
+Eli

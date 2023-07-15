@@ -1,0 +1,14 @@
+{
+  "hash": "c3217054d4eb0e6b2f376a2b838a6b8d",
+  "result": {
+    "markdown": "---\ntitle: \"Eli Boahen | Homework 3\"\nauthor: \"Eli Boahen\"\ndescription: \"Ananlalysis fo stress in the US over time\"\ndate: \"07/08/2023\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n    code-copy: true\n    code-tools: true\ncategories:\n  - HW3\n  - Eli Boahen\n  - Homework 3\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nknitr::opts_chunk$set(echo = TRUE)\n```\n:::\n\n\n The emphasis in this homework is on exploratory data analysis using both graphics and statistics. It is intended to be a rough draft of your project.\n\nYou should build on your prior homework - incorporating any feedback and adjusting the code and text as needed.\n\nThese homeworks are intended to be cumulative. Therefore, while it is fine to switch datasets, you will need to include all of the information from HW2 for your new (or old) dataset in this hw submission as well. \n## Include descriptive statistics\n\n### Mean\n### Median\n### Standard deviation for numerical variables\n### Frequencies and/or mode for categorical variables\n\n## Relevant visualizations using ggplot2 to complement these descriptive statistics\nBe sure to use faceting, coloring, and titles as needed. Each visualization should be accompanied by\n### Descriptive text that highlights\n#### the variable(s) used\n#### what questions might be answered with the visualizations\n#### What conclusions you can draw\n\n## Groupings\n- Use group_by()\n- Use summarise()\n- Compute descriptive stats and/or visualizations for any relevant groupings.\n\n:::{callout-tip}\nFor example, if you were interested in how average income varies by state, you might compute mean income for all states combined, and then compare this to the range and distribution of mean income for each individual state in the US.\n:::\n\n## Identify limitations of your visualization, such as:\n\n### What questions are left unanswered with your visualizations\n### What about the visualizations may be unclear to a naive viewer\n### How could you improve the visualizations for the final project\n \n \n ",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
