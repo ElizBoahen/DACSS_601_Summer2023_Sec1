@@ -1,8 +1,8 @@
 ---
-title: "Eli Boahen | Challenge 2"
+title: "Eli B | Challenge 2"
 author: "Eli Boahen"
-description: "Data wrangling: using group() and summarise()"
-date: "07/15/2023"
+desription: "Data wrangling: using group() and summarise()"
+date: "05/29/2023"
 format:
   html:
     toc: true
@@ -23,7 +23,7 @@ categories:
 #| message: false
 
 library(tidyverse)
-
+#install.packages("dplyr")
 knitr::opts_chunk$set(echo = TRUE, warning=FALSE, message=FALSE)
 ```
 
@@ -38,33 +38,87 @@ Today's challenge is to
 
 Read in one (or more) of the following data sets, available in the `posts/_data` folder, using the correct R package and command.
 
--   railroad\*.csv or StateCounty2012.xls ⭐
+-   ***railroad\*.csv*** or StateCounty2012.xls ⭐
 -   FAOstat\*.csv or birds.csv ⭐⭐⭐
 -   hotel_bookings.csv ⭐⭐⭐⭐
 
 ```{r}
+library(readr)
 
+# I am using the same data set for continuity + it helps me see the differences
+df_rr <- read.csv("_data/railroad_2012_clean_county.csv")
+head(df_rr)
 ```
 
-Add any comments or documentation as needed. More challenging data may require additional code chunks and documentation.
+*Add any comments or documentation as needed. More challenging data may require additional code chunks and documentation.*
 
 ## Describe the data
 
-Using a combination of words and results of R commands, can you provide a high level description of the data? Describe as efficiently as possible where/how the data was (likely) gathered, indicate the cases and variables (both the interpretation and any details you deem useful to the reader to fully understand your chosen data).
+*Using a combination of words and results of R commands, can you provide a high level description of the data? Describe as efficiently as possible where/how the data was (likely) gathered, indicate the cases and variables (both the interpretation and any details you deem useful to the reader to fully understand your chosen data).*
 
 ```{r}
 #| label: summary
-
+summary(df_rr)
 ```
+
+### Eli's Summary
+
+Building off of my previous summary, I assume this data was collected by locating each railroad by government address, then collecting the employee number per location. This can explain the outlier locations `AE`,`AP`, and `DC`a. All and all a location-specifier-number straightforward dataset.
 
 ## Provide Grouped Summary Statistics
 
-Conduct some exploratory data analysis, using dplyr commands such as `group_by()`, `select()`, `filter()`, and `summarise()`. Find the central tendency (mean, median, mode) and dispersion (standard deviation, mix/max/quantile) for different subgroups within the data set.
+*Conduct some exploratory data analysis, using dplyr commands such as `group_by()`, `select()`, `filter()`, and `summarise()`. Find the central tendency (mean, median, mode) and dispersion (standard deviation, mix/max/quantile) for different subgroups within the data set.*
+
+### Eli's Summary of Statistics
+First, I want to look at something interesting: I'm curious about how many employees there are at each location.
 
 ```{r}
+#formatting = fmat ( my little shorthand )
 
+#fmat | (dataframe, column to sort by)
+arrange(df_rr, total_employees) # sort by the column "total_employees"
+
+#fmat | (dataframe, column and conditional)
+df_10_less_rr <- filter(df_rr, total_employees <=10) # Only shows places with 10 or less employees
 ```
 
-### Explain and Interpret
+I saw a couple of `1`'s before so that made me curious. In the end, I learned that there are quite a number of locations with less than 10 employees.
+```{r}
+dim(df_rr) # The original dataset
+dim(df_10_less_rr) # the "10 or less" dataframe
+```
+Well,
+```{r}
+percent_decrease <-((2930-991)/2930)*100
+percent_decrease #This will show the decrease percentage from 2930 to 991
+```
+About a __third__ have less than 10 employees!
+```{r}
+mean(df_10_less_rr$total_employees)
+mode(df_10_less_rr) # This doesn't really work . . .
+table(df_10_less_rr$total_employees)
 
-Be sure to explain why you choose a specific group. Comment on the interpretation of any interesting differences between groups that you uncover. This section can be integrated with the exploratory data analysis, just be sure it is included.
+summary(df_10_less_rr)
+
+# ~ Things I did not use ~ #
+#median(df_10_less_rr$total_employees) # I ran this, but the median ( the central data point ) isn't really helpful for us here.
+# I don't really have 2 number sets to mutate, or mutate something that would be beneficial
+# mutate(df_rr, )
+#names(sort(-table(df_10_less_rr$total_employees)))
+```
+Looking at our information above,  the mean---or average---is `4.84`. This means at stations with 10 or less employees, there are only about 5 employees per station. Using `table` we can see that `1` employee and `2` employees are the the most common number of employees per station, for those with 10 or fewer. In fact, `8` or higher makes up 
+```{r}
+#                 (Total - 8 to 10 employees) divided by Total multiplied by 100
+higher_end_percent <- ((74+71+75)/991)*100
+higher_end_percent
+```
+                                only 22% of this subset---meaning 78% of the stations have 7 or less employees
+
+
+### Explain and Interpret
+*Be sure to explain why you choose a specific group. Comment on the interpretation of any interesting differences between groups that you uncover. This section can be integrated with the exploratory data analysis, just be sure it is included.*
+
+### Eli's Thoughts
+I chose this group, or subsection, because I found it interesting how many locations had as low a `1` employee. I thought that there might be only a few, but there are almost 200 locations with 10 or less employees, which was really surprising for me.
+
+Overall, I learned that a third of stations have less than 10 employees. Of that third, it is most common for stations to have 1 or 2 employees, as stations with 8 or more employees making up 22% of the "10 or less group".

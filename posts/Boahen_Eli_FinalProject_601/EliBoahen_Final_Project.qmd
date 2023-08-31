@@ -439,7 +439,7 @@ The response towards humans was generally neutral. based on the words used to de
 I feel that a survey with direct questions about humans and humanness would be better suited for a hypothesis like this, however I think that gets more into morality and may distract from the overall survey.
 
 #### The majority of participants will have a neutral association with cyborgs.
-Actually, the responses leaned towards positive. I believe this is influence by media as film and media were referenced in participant responses.
+Actually, the responses leaned towards positive. I believe this is influende by media as film and media were referenced in participant responses.
 
 #### The majority of participants will have a negative association with robots.
 True. Participants were not in favor of friendhip, nor rights for robots. In addition, the word association section for robots contained words such as "scary", "cold", and frequently describing it's materiality rather than a capability---humans had "emotions", "brain", and "biology" while robots had "machine", "metal", and "computer".

@@ -41,14 +41,25 @@ Today's challenge is to:
 
 Read in one (or more) of the following datasets, using the correct R package and command.
 
--   animal_weights.csv ⭐
+-   *animal_weights.csv ⭐*
 -   eggs_tidy.csv ⭐⭐ or organiceggpoultry.xls ⭐⭐⭐
 -   australian_marriage\*.xls ⭐⭐⭐
 -   USA Households\*.xlsx ⭐⭐⭐⭐
 -   sce_labor_chart_data_public.xlsx 🌟🌟🌟🌟🌟
 
 ```{r}
+library(readr)
+library(readxl)
 
+#-------------------------- Okay
+df_aw <- read.csv("_data/animal_weight.csv") # the data is named "animal_weight" without the "s", which tripped me up a bit
+head(df_aw)
+#-------------------------- Seems already tidy?
+df_amt <- read.csv("_data/australian_marriage_tidy.csv") # amt = australian marriage tidy
+head(df_amt)
+#-------------------------- Has a lot of blanks
+#df_ams <- read_excel("_data/australian_marriage_law_postal_survey_2017_-_response_final.xls") # amt = australian marriage survey
+#head(df_ams)
 
 ```
 

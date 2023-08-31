@@ -1,0 +1,14 @@
+{
+  "hash": "eb7faa374f0a9bad4bf4e39acd8b4138",
+  "result": {
+    "markdown": "---\ntitle: \"Eli Boahen | Tutorial 5\"\nauthor: \"Eli Boahen\"\ndescription: \"Tutorial 5 Completion\"\ndate: \"07/13/2023\"\nformat:\n  html:\n    toc: true\n    code-fold: true\n    code-copy: true\n    code-tools: true\ncategories:\n  - Tutorial5\n  - EliBoahen\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidyverse)\n\nknitr::opts_chunk$set(echo = TRUE)\n```\n:::\n\n\n## What did you learn?\nWe learned what is piping and how to use `%>%`, `group_by()`, `function(){}`, and `for(){}`\n\n## What did you remember?\nOrder matters a lot for piping\n\n## Anything you didn't understand?\nI dont' reeaaaly understand why piping isn't on every line of R\n\n::: {.cell}\n\n```{.r .cell-code}\n# Later on I thought of it like Mario:\n# Going into a pipe, doing tasks & exploring a world\n```\n:::\n\n\n## Something you would change?\nThe *Writing Functions* section is a bit long and intimidating with the uncollapsible R code\n\nNot is a mean way at all! I saw a typo in Piping basics, second to last paragraph, \"oten\". I make the same mistake myself and often miss or don't flag it because \"f\" and \"t\" look similar to me.\n\n\nBest wishes,\nEli",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

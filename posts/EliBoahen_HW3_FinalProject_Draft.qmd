@@ -24,11 +24,17 @@ library(tidyverse)
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
- The emphasis in this homework is on exploratory data analysis using both graphics and statistics. It is intended to be a rough draft of your project.
+*The emphasis in this homework is on exploratory data analysis using both graphics and statistics. It is intended to be a rough draft of your project.*
 
-You should build on your prior homework - incorporating any feedback and adjusting the code and text as needed.
+*You should build on your prior homework - incorporating any feedback and adjusting the code and text as needed.*
 
-These homeworks are intended to be cumulative. Therefore, while it is fine to switch datasets, you will need to include all of the information from HW2 for your new (or old) dataset in this hw submission as well. 
+*These homework are intended to be cumulative. Therefore, while it is fine to switch datasets, you will need to include all of the information from HW2 for your new (or old) dataset in this hw submission as well.*
+
+```{r}
+read.csv()
+```
+
+
 ## Include descriptive statistics
 
 ### Mean
